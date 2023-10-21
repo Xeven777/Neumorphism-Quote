@@ -1,13 +1,44 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Lato:ital,wght@0,400;0,700;1,300;1,400&family=Raleway:wght@400;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Lato:ital,wght@0,400;0,700;1,300;1,400&family=Raleway:wght@400;600&display=swap");
 
 .App {
   height: 100vh;
   width: 100vw;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+.App-header {
+  position: fixed;
+  top: 1%;
+  padding: 7px auto;
+  font-size: clamp(1.8rem, 3.2vw, 3.5rem);
+  font-family: "Montserrat";
+  font-weight: 600;
+  margin: 3rem auto;
+  color: rgba(136, 136, 136, 0.856);
+  text-shadow: 3px 3px 6px #c7c7c7, -3px -3px 6px #fffffe;
+}
+.foot {
+  position: fixed;
+  bottom: 1%;
+  font-size: clamp(1.2rem, 2vw, 2.2rem);
+  letter-spacing: 2px;
+  font-family: "Montserrat";
+  margin: 2rem auto;
+  color: rgba(136, 136, 136, 0.856);
+  text-shadow: 3px 3px 6px #c7c7c7, -3px -3px 6px #fffffe;
+}
+a {
+  text-decoration: none;
+  color: rgba(148, 148, 148, 0.856);
+  transition: all 0.3s ease-in-out;
+}
+a:hover {
+  color: rgba(127, 165, 167, 0.856);
+  cursor: crosshair;
 }
