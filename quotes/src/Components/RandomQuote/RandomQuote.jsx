@@ -16,7 +16,7 @@ const RandomQuote = () => {
 
   useEffect(() => {
     loadQuotes();
-  }, []);
+  },[]);
 
   const twitter = () => {
     window.open(
