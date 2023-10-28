@@ -6,15 +6,15 @@
   align-items: center;
   justify-content: center;
   margin: auto;
-  width: 700px;
+  width: 700px;;
   height: 340px;
   border-radius: 3rem;
   background: #ececea;
   box-shadow: 36px 36px 72px #c7c6c4, -36px -36px 72px #fffefb;
 }
 .text {
-  font-size: 1.6rem;
-  padding: 4rem 5.7rem;
+  font-size: 1.4rem;
+  padding: 4rem 5.7rem 3rem;
   text-align: right;
   margin: 1rem;
 }
@@ -59,7 +59,7 @@ img {
     height: 300px;
   }
   .text {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     text-align: center;
     padding: 1.8rem;
     margin: 1rem;
@@ -72,6 +72,6 @@ img {
     width: 25px;
   }
   .author {
-    font-size: 1rem;
+    font-size: .9rem;
   }
 }

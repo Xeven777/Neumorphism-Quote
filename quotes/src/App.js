@@ -6,7 +6,7 @@ function App() {
     <div className="App">
       <header className="App-header">Neumorphism Quotes</header>
       <RandomQuote />
-      <div className="foot">Made by <a href="https://bento.me/anish7">Anish</a></div>
+      <div className="foot">Made by <a href="https://bento.me/anish7" target="__blank">Anish</a></div>
     </div>
   );
 }

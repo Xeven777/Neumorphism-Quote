@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from "react";
+import axios from "axios";
 import xSvg from "../Assets/x.svg";
 import "./Rq.css";
 
+const apiKey = process.env.REACT_APP_API_KEY;
 const RandomQuote = () => {
   const [quote, setQuote] = useState({
     text: "",
@@ -9,14 +11,23 @@ const RandomQuote = () => {
   });
 
   const loadQuotes = async () => {
-    const response = await fetch("https://type.fit/api/quotes");
-    const data = await response.json();
-    setQuote(data[Math.floor(Math.random() * data.length)]);
+    // const category = "happiness";
+    try {
+      const response = await axios.get(`https://api.api-ninjas.com/v1/quotes`, {
+        headers: {
+          "X-Api-Key": apiKey,
+        },
+      });
+      const newQuote = response.data[0];
+      setQuote(newQuote);
+    } catch (error) {
+      console.error("Error loading quotes:", error);
+    }
   };
 
   useEffect(() => {
     loadQuotes();
-  },[]);
+  }, []); // Empty dependency array ensures the effect runs once after the initial render
 
   const twitter = () => {
     window.open(
@@ -28,11 +39,11 @@ const RandomQuote = () => {
 
   return (
     <div className="container">
-      <div className="text">{quote.text}</div>
+      <div className="text">{quote.quote}</div>
       <div className="lower">
         <div className="line"></div>
         <div className="share">
-          <div className="author"> - {quote.author.split(",")[0]}</div>
+          <div className="author"> - {quote.author}</div>
           <div className="icons">
             <img
               src="https://img.icons8.com/ios/50/available-updates.png"
