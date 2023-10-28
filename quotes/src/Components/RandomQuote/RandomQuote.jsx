@@ -3,7 +3,6 @@ import axios from "axios";
 import xSvg from "../Assets/x.svg";
 import "./Rq.css";
 
-const apiKey = process.env.REACT_APP_API_KEY;
 const RandomQuote = () => {
   const [quote, setQuote] = useState({
     text: "",
@@ -15,7 +14,7 @@ const RandomQuote = () => {
     try {
       const response = await axios.get(`https://api.api-ninjas.com/v1/quotes`, {
         headers: {
-          "X-Api-Key": apiKey,
+          "X-Api-Key": "0aB/uM7KvMCxtbs7fE4qWg==HQvEjHvEZ0sz02ax",
         },
       });
       const newQuote = response.data[0];
