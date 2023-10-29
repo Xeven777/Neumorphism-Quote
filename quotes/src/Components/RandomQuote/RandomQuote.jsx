@@ -5,8 +5,8 @@ import "./Rq.css";
 
 const RandomQuote = () => {
   const [quote, setQuote] = useState({
-    text: "",
-    author: "",
+    text: ":)",
+    author: "Anish",
   });
 
   const loadQuotes = async () => {
@@ -26,11 +26,11 @@ const RandomQuote = () => {
 
   useEffect(() => {
     loadQuotes();
-  }, []); // Empty dependency array ensures the effect runs once after the initial render
+  }, []);
 
   const twitter = () => {
     window.open(
-      `https://twitter.com/intent/tweet?text=${quote.text} - ${
+      `https://twitter.com/intent/tweet?text=${quote.quote} - ${
         quote.author.split(",")[0]
       }`
     );
